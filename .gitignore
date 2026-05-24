@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+*.egg
+
+# Database
+*.db
+*.db-shm
+*.db-wal
+data/
+
+# AI Cache
+backend/data/ai_cache/
+
+# Node
+node_modules/
+frontend/dist/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Claude
+.claude/
+
+# Env
+.env
+.env.local

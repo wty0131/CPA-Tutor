@@ -1,0 +1,58 @@
+app:
+  name: "CPA Tutor"
+  version: "0.1.0"
+
+server:
+  host: "127.0.0.1"
+  port: 8000
+
+database:
+  url: "sqlite:///./data/cpa_tutor.db"
+
+ai:
+  provider: "deepseek"
+  model: "deepseek-chat"
+  base_url: "https://api.deepseek.com"
+  api_key: ""
+  api_key_env: "DEEPSEEK_API_KEY"
+  temperature_generation: 0.3
+  temperature_review: 0.0
+  max_tokens: 4096
+  cache_responses: true
+  self_review_enabled: true
+
+scraping:
+  user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+  request_delay: 2
+  sources:
+    # CPA 题库来源配置，后续添加具体URL
+    example_source:
+      enabled: false
+      url: "https://example.com/cpa-questions"
+      subject_map:
+        accounting: "会计"
+        auditing: "审计"
+        financial_management: "财务成本管理"
+        tax_law: "税法"
+        economic_law: "经济法"
+        strategy: "公司战略与风险管理"
+
+subjects:
+  - code: "CPA-01"
+    name: "会计"
+    description: "企业会计准则、财务报表编制、合并报表等"
+  - code: "CPA-02"
+    name: "审计"
+    description: "审计准则、审计程序、审计报告等"
+  - code: "CPA-03"
+    name: "财务成本管理"
+    description: "财务分析、成本计算、预算管理等"
+  - code: "CPA-04"
+    name: "税法"
+    description: "增值税、企业所得税、个人所得税等"
+  - code: "CPA-05"
+    name: "经济法"
+    description: "公司法、合同法、证券法等"
+  - code: "CPA-06"
+    name: "公司战略与风险管理"
+    description: "战略分析、风险管理、内部控制等"
